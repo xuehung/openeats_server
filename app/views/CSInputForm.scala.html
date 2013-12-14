@@ -1,0 +1,15 @@
+@(record: CSRecord)
+
+@csmain("Crowdsourcing") {
+<h1>ID: @record.id</h1>
+<h1>Barcode: @record.barcode</h1>
+<div class="row">
+    <div class="col-lg-4">
+<img class="cs-img" src="/assets/csimg/@record.id/@record.picOneName" />
+<img class="cs-img" src="/assets/csimg/@record.id/@record.picTwoName" />
+<img class="cs-img" src="/assets/csimg/@record.id/@record.picThreeName" />
+</div>
+    <div class="col-lg-8">
+</div>
+</div>
+}
