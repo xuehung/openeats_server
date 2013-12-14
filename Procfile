@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/myfirstapp -Dhttp.port=${PORT} -DapplyEvolutions.default=true
+web: target/universal/stage/bin/openeats_server -Dhttp.port=${PORT} -DapplyEvolutions.default=true
