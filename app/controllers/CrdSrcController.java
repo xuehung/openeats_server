@@ -80,7 +80,7 @@ public class CrdSrcController extends Controller {
 	} catch (Exception e) {
 	    return ok(e.toString());
 	}
-
+/*
 	// create the directory
 	File dir = new File(playPath+"/public/csimg/"+r.id);
 	try {
@@ -100,10 +100,8 @@ public class CrdSrcController extends Controller {
 	} catch (Exception e) {
 	    return ok("Failed to move files");
 	}
-
-	//return ok(Play.application().path()+":"+barcode+":"+fileName+":"+contentType);
-	//return ok("success");
-	return ok(result);
+*/
+	return ok("success");
     }
 
     @play.db.jpa.Transactional
@@ -124,6 +122,7 @@ public class CrdSrcController extends Controller {
 	    JSONObject jsonObj = new JSONObject(result);
 	    result = (String)jsonObj.get("href");
 	} catch(Exception e) {
+	    return ok(e.toString());
 	}
 	return ok(CSInputForm.render(r, result)); 
     }
